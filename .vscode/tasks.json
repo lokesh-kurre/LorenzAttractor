@@ -1,0 +1,104 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "C/C++: g++.exe build active file",
+			"command": "g++",
+			"args": [
+				"-Wall",
+				"-Wextra",
+				"-Wconversion",
+				"-Wunused",
+				"-Wpedantic",
+				"-std=c++17",
+				"-g",
+				"${relativeFile}",
+				"-o",
+				"${relativeFileDirname}\\main.exe",
+			],
+			"options": {
+				"cwd": "${workspaceFolder}",
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"detail": "compiler: MSYS MINGW64 Compiler"
+		},
+		{
+			"type": "shell",
+			"label": "C/C++: g++.exe build active folder",
+			"command": "g++",
+			"args": [
+				"-Wall",
+				"-Wextra",
+				"-Wconversion",
+				"-Wunused",
+				"-Wpedantic",
+				"-std=c++17",
+				"-g",
+				"${relativeFileDirname}\\*.cpp",
+				"-o",
+				"${relativeFileDirname}\\main.exe",
+				"-L=F:\\Software\\msys64\\mingw64\\lib\\pkgconfig",
+				"-lsfml-graphics",
+				"-lsfml-window",
+				"-lsfml-system",
+				"-lopengl32",
+				"-lwinmm",
+				"-lgdi32"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"detail": "compiler: MSYS MINGW64 Compiler"
+		},
+		{
+			"label": "Run C/C++",
+			"type": "shell",
+			"command": "${relativeFileDirname}\\main.exe",
+			"options": {
+				"cwd": "${workspaceFolder}",
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"detail": "Run Executable"
+		}
+	]
+}

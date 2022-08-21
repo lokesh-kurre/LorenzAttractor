@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "mingw-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "F:\\Software\\msys64\\mingw64\\include",
+                "${default}"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "F:\\Software\\msys64\\mingw64\\bin\\g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerArgs": [
+				"-Wall",
+				"-Wextra",
+				"-Wconversion",
+				"-Wunused",
+				"-Wpedantic",
+				"-std=c++17",
+				"-g",
+				"${relativeFile}",
+				"-o",
+				"${relativeFileDirname}\\main.exe"
+			]
+        }
+    ],
+    "version": 4
+}
